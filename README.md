@@ -17,7 +17,7 @@ Se iniciara el proyecto en modo desarrollo archivo de configuración `docker-com
 
 ####Instalación de seeders
 
-Es necesario instalar los seeder para que puedan realizar la prueba del aplicativo o pueden crear manualmente a traves de la colección de postman los registros
+Antes de ejecutar los seeds debe tener levantado el servidor principal para que pueda realizar la siembra sin problema. Es necesario instalar los seeder para que puedan realizar la prueba del aplicativo o pueden crear manualmente a traves de la colección de postman los registros
 
 Run `npm run seed`
 

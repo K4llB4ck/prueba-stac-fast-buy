@@ -3,4 +3,4 @@ version: '3'
 services:
   node-app:
     container_name: node-app-dev
-    command: npm run dev && npm run seed
+    command: npm run dev 
