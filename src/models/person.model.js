@@ -25,6 +25,11 @@ const personSchema = mongoose.Schema({
 
 });
 
+personSchema.static.isTaken = async function(identification) {
+    const person = await this.findOne({identification});
+    return !!person;
+}
+
 const Person = mongoose.model('Person', personSchema);
 
 module.exports = Person;

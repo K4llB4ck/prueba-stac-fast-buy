@@ -10,8 +10,7 @@ const orderSchema = mongoose.Schema({
     },
     deliveryId: {
         type: Schemas.ObjectId,
-        ref: 'Dealer',
-        default: 0
+        ref: 'Dealer'
     },
     status: {
         type: String,

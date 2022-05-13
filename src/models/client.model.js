@@ -3,7 +3,7 @@ const Schemas = mongoose.SchemaTypes;
 
 const ClientSchema = mongoose.Schema({
     personId: {
-        type: SchemaTypes.ObjectId,
+        type: Schemas.ObjectId,
         ref: 'Category',
         required: true
     },
@@ -15,6 +15,8 @@ const ClientSchema = mongoose.Schema({
     timestamps: true
 
 });
+
+
 
 const Client = mongoose.model('Client', ClientSchema);
 

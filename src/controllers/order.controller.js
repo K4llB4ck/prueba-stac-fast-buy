@@ -8,7 +8,23 @@ const createOrder = catchAsync(async (req, res) => {
     res.status(httpStatus.CREATED).send(order);
 });
 
+const getOrders = catchAsync(async (req, res) => {
+    const result = await orderService.queryOrders();
+    res.send(result);
+});
+
+/**
+ * Devuelve las ordenes pendientes para entrega- para los repartidores
+ */
+const getOrdersPending =  catchAsync(async(req,res) =>{
+    const result = await orderService.getOrdersPending();
+    res.send(result);
+});
+
+
 
 module.exports = {
-    createOrder
+    createOrder,
+    getOrders,
+    getOrdersPending
 }

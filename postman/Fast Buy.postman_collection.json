@@ -1,0 +1,757 @@
+{
+	"info": {
+		"_postman_id": "a0a75552-3df6-4a86-b893-2f42e06392af",
+		"name": "Fast Buy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "Create Category",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Belleza\",\r\n    \"description\": \"Productos de belleza para mujeres y hombres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{HOST}}/categories"
+					},
+					"response": [
+						{
+							"name": "Create Category ERROR",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Belleza\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{HOST}}/categories"
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1510"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e6-YPdEmhqEgjUqqY7i3NggXolUgYQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 16:03:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": 400,\n    \"message\": \"\\\"description\\\" is required\",\n    \"stack\": \"Error: \\\"description\\\" is required\\n    at /usr/src/node-app/src/middlewares/validate.js:15:21\\n    at Layer.handle [as handle_request] (/usr/src/node-app/node_modules/express/lib/router/layer.js:95:5)\\n    at next (/usr/src/node-app/node_modules/express/lib/router/route.js:144:13)\\n    at Route.dispatch (/usr/src/node-app/node_modules/express/lib/router/route.js:114:3)\\n    at Layer.handle [as handle_request] (/usr/src/node-app/node_modules/express/lib/router/layer.js:95:5)\\n    at /usr/src/node-app/node_modules/express/lib/router/index.js:284:15\\n    at Function.process_params (/usr/src/node-app/node_modules/express/lib/router/index.js:346:12)\\n    at next (/usr/src/node-app/node_modules/express/lib/router/index.js:280:10)\\n    at Function.handle (/usr/src/node-app/node_modules/express/lib/router/index.js:175:3)\\n    at router (/usr/src/node-app/node_modules/express/lib/router/index.js:47:12)\\n    at Layer.handle [as handle_request] (/usr/src/node-app/node_modules/express/lib/router/layer.js:95:5)\\n    at trim_prefix (/usr/src/node-app/node_modules/express/lib/router/index.js:328:13)\\n    at /usr/src/node-app/node_modules/express/lib/router/index.js:286:9\\n    at Function.process_params (/usr/src/node-app/node_modules/express/lib/router/index.js:346:12)\\n    at next (/usr/src/node-app/node_modules/express/lib/router/index.js:280:10)\\n    at Function.handle (/usr/src/node-app/node_modules/express/lib/router/index.js:175:3)\"\n}"
+						},
+						{
+							"name": "Create Category SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Tecnologia\",\r\n    \"description\": \"Productos para tu hogar lo ultimo\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{HOST}}/categories"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "190"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"be-PlmfOTday0UI5EFsqP+PMW9r3R4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 21:01:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"627ec730a9b631002f8e1e6d\",\n    \"name\": \"Tecnologia\",\n    \"description\": \"Productos para tu hogar lo ultimo\",\n    \"createdAt\": \"2022-05-13T21:01:36.818Z\",\n    \"updatedAt\": \"2022-05-13T21:01:36.818Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "All categories",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{HOST}}/categories"
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{HOST}}/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "371"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"173-5ELKey69H2OLmrbfW6B6zjFwcMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 15:38:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"627e78965277b9002fe0b2fb\",\n        \"name\": \"Hogar\",\n        \"description\": \"Productos del hogar\",\n        \"createdAt\": \"2022-05-13T15:26:14.575Z\",\n        \"updatedAt\": \"2022-05-13T15:26:14.575Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"627e7b814687b1002f40b281\",\n        \"name\": \"Belleza\",\n        \"description\": \"Productos de belleza para mujeres y hombres\",\n        \"createdAt\": \"2022-05-13T15:38:41.682Z\",\n        \"updatedAt\": \"2022-05-13T15:38:41.682Z\",\n        \"__v\": 0\n    }\n]"
+						},
+						{
+							"name": "All categories SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{HOST}}/categories"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "371"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"173-5ELKey69H2OLmrbfW6B6zjFwcMA\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 17:01:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"627e78965277b9002fe0b2fb\",\n        \"name\": \"Hogar\",\n        \"description\": \"Productos del hogar\",\n        \"createdAt\": \"2022-05-13T15:26:14.575Z\",\n        \"updatedAt\": \"2022-05-13T15:26:14.575Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"627e7b814687b1002f40b281\",\n        \"name\": \"Belleza\",\n        \"description\": \"Productos de belleza para mujeres y hombres\",\n        \"createdAt\": \"2022-05-13T15:38:41.682Z\",\n        \"updatedAt\": \"2022-05-13T15:38:41.682Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "Create Product",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Aspiradora Robotica \",\r\n    \"price\": \"479900\",\r\n    \"description\": \"Aspiradora Robotica 2 en 1 Smartklean\",\r\n    \"sku\": \"002\",\r\n    \"categoryId\": \"1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{HOST}}/products"
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n        \"name\": \"Delineador para Ojos\",\r\n        \"price\": \"18400\",\r\n        \"description\": \"Jonteblu Liquido Brushs\",\r\n        \"sku\": \"001\",\r\n        \"categoryId\": \"627e7b814687b1002f40b281\"\r\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{HOST}}/products"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "256"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"100-GrzLFFyFkZsIXGkrGBPOfh0b+Yk\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 17:02:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"627e8f13f25308002fcad4a0\",\n    \"name\": \"Delineador para Ojos\",\n    \"price\": 18400,\n    \"description\": \"Jonteblu Liquido Brushs\",\n    \"sku\": \"001\",\n    \"categoryId\": \"627e7b814687b1002f40b281\",\n    \"createdAt\": \"2022-05-13T17:02:11.403Z\",\n    \"updatedAt\": \"2022-05-13T17:02:11.403Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "All products",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{HOST}}/products"
+					},
+					"response": [
+						{
+							"name": "All products SUCCES",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{HOST}}/products"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "530"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"212-mzI7yASb2NxV2SBwYaSbN+tQrm4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 17:02:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"627e8ee2f25308002fcad49f\",\n        \"name\": \"Aspiradora Robotica \",\n        \"price\": 479900,\n        \"description\": \"Aspiradora Robotica 2 en 1 Smartklean\",\n        \"sku\": \"002\",\n        \"categoryId\": \"627e78965277b9002fe0b2fb\",\n        \"createdAt\": \"2022-05-13T17:01:23.087Z\",\n        \"updatedAt\": \"2022-05-13T17:01:23.087Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"627e8f13f25308002fcad4a0\",\n        \"name\": \"Delineador para Ojos\",\n        \"price\": 18400,\n        \"description\": \"Jonteblu Liquido Brushs\",\n        \"sku\": \"001\",\n        \"categoryId\": \"627e7b814687b1002f40b281\",\n        \"createdAt\": \"2022-05-13T17:02:11.403Z\",\n        \"updatedAt\": \"2022-05-13T17:02:11.403Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"client\": {\r\n        \"firstname\": \"Jerfeson Alexander\",\r\n        \"lastname\": \"Rocha Romero\",\r\n        \"identification\": \"1073237444\",\r\n        \"street\": \"calle 138 # 10a -97\"\r\n    },\r\n    \"products\": [\"627e8ee2f25308002fcad49f\",\"627e8f13f25308002fcad4a0\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{HOST}}/orders"
+					},
+					"response": [
+						{
+							"name": "Create Order SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"client\": {\r\n        \"firstname\": \"Fernando\",\r\n        \"lastname\": \"Bernatte\",\r\n        \"identification\": \"1018504191\",\r\n        \"street\": \"calle 138 # 10a -97\"\r\n    },\r\n    \"products\": [\"627e8ee2f25308002fcad49f\",\"627e8f13f25308002fcad4a0\"]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{HOST}}/orders"
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "189"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bd-vZ7MwtBqc28Znzcw95yTyybfVzE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 20:28:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"open\",\n    \"total\": 498300,\n    \"_id\": \"627ebf543866f4002f1a2a08\",\n    \"clientId\": \"627ebe4ec7fb1a0030db68aa\",\n    \"createdAt\": \"2022-05-13T20:28:04.483Z\",\n    \"updatedAt\": \"2022-05-13T20:28:04.483Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "All Orders",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{HOST}}/orders"
+					},
+					"response": [
+						{
+							"name": "All Orders SUCCESS",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": "{{HOST}}/orders"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "191"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"bf-PccsBVRs9UEIQyO06lnRJZAc5hY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 20:30:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"status\": \"open\",\n        \"total\": 498300,\n        \"_id\": \"627ebf543866f4002f1a2a08\",\n        \"clientId\": \"627ebe4ec7fb1a0030db68aa\",\n        \"createdAt\": \"2022-05-13T20:28:04.483Z\",\n        \"updatedAt\": \"2022-05-13T20:28:04.483Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Dealers",
+			"item": [
+				{
+					"name": "All Orders Pending",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": "{{HOST}}/orders/pending"
+					},
+					"response": [
+						{
+							"name": "SUCCESS",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": "{{HOST}}/orders/pending"
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "337"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"151-7x4er1vv/N+Gmr1+ZAcVJeKBI5A\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 13 May 2022 20:57:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"status\": \"open\",\n        \"total\": 498300,\n        \"_id\": \"627ebf543866f4002f1a2a08\",\n        \"clientId\": {\n            \"active\": true,\n            \"_id\": \"627ebe4ec7fb1a0030db68aa\",\n            \"personId\": \"627ebe4ec7fb1a0030db68a9\",\n            \"createdAt\": \"2022-05-13T20:23:42.683Z\",\n            \"updatedAt\": \"2022-05-13T20:23:42.683Z\",\n            \"__v\": 0\n        },\n        \"createdAt\": \"2022-05-13T20:28:04.483Z\",\n        \"updatedAt\": \"2022-05-13T20:28:04.483Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
