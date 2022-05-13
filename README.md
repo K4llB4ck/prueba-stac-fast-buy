@@ -15,16 +15,18 @@ Run `npm run docker:dev`
 
 Se iniciara el proyecto en modo desarrollo archivo de configuración `docker-compose.dev.yml`.
 
-####Instalación de seeders
-
-Antes de ejecutar los seeds debe tener levantado el servidor principal para que pueda realizar la siembra sin problema. Es necesario instalar los seeder para que puedan realizar la prueba del aplicativo o pueden crear manualmente a traves de la colección de postman los registros
-
-Run `npm run seed`
-
-
 
 
 ## Colección de postman
 
 En la carpeta src/postman se encuentra la colección con la que pueden probar el microservicio realizado.
+
+Debe crear categorias
+
+## Ambiente de producción
+
+Se configuro pm2 para la persistencia del servidor en caso de error al desplegar al servidor se debe ejecutar el comando 
+
+Run `npm runstart`
+
 
