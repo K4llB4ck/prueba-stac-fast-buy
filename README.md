@@ -11,13 +11,13 @@ Instalación
 
 ####Instalación con docker:
 
-Run `npm run dev`
+Run `npm run docker:dev`
 
 Se iniciara el proyecto en modo desarrollo archivo de configuración `docker-compose.dev.yml`.
 
 ####Instalación de seeders
 
-Es necesario instalar los seeder para que puedan realiar la prueba del aplicativo o pueden crear manualmente a traves de la colección de postman los registros
+Es necesario instalar los seeder para que puedan realizar la prueba del aplicativo o pueden crear manualmente a traves de la colección de postman los registros
 
 Run `npm run seed`
 
